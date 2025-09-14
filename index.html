@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Cheat Sheets</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        // Make jsPDF available globally
+        window.jspdf = window.jspdf || {};
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1><i class="fas fa-code"></i> Programming Cheat Sheets</h1>
+                <div class="header-controls">
+                    <div class="search-container">
+                        <input type="text" id="searchInput" placeholder="Search commands, syntax... (Press / to focus)">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                    <button id="themeToggle" class="theme-toggle" title="Toggle Dark/Light Mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button id="pdfExport" class="pdf-export" title="Export as PDF">
+                        <i class="fas fa-file-pdf"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <nav class="language-nav">
+                    <h3>Languages</h3>
+                    <ul id="languageList">
+                        <li><a href="#" data-lang="python" class="active"><i class="fab fa-python"></i> Python</a></li>
+                        <li><a href="#" data-lang="javascript"><i class="fab fa-js-square"></i> JavaScript</a></li>
+                        <li><a href="#" data-lang="java"><i class="fab fa-java"></i> Java</a></li>
+                        <li><a href="#" data-lang="cpp"><i class="fas fa-code"></i> C++</a></li>
+                        <li><a href="#" data-lang="html"><i class="fab fa-html5"></i> HTML</a></li>
+                        <li><a href="#" data-lang="css"><i class="fab fa-css3-alt"></i> CSS</a></li>
+                        <li><a href="#" data-lang="sql"><i class="fas fa-database"></i> SQL</a></li>
+                        <li><a href="#" data-lang="git"><i class="fab fa-git-alt"></i> Git</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Content Area -->
+            <main class="content">
+                <div id="cheatSheetContent">
+                    <!-- Dynamic content will be loaded here -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <span id="toastMessage"></span>
+    </div>
+
+    <script src="cheatsheets.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
